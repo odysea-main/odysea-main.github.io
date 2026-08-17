@@ -1,0 +1,40 @@
+{
+  "name": "iliadx-singapore.github.io",
+  "version": "1.0.0",
+  "description": "A single-page site for ILIADx (Bringing Iliad to Singapore) — a free, community-led pilot bringing Iliad's technical AI alignment curriculum to Singapore. Dark hero, mission strip, tracks, curriculum, schedule, precedent, advisors, team, get-involved. Plain HTML/CSS/JS — no build step, no dependencies beyond Google Fonts.",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliadx-singapore/iliadx-singapore.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/iliadx-singapore/iliadx-singapore.github.io/issues"
+  },
+  "homepage": "https://github.com/iliadx-singapore/iliadx-singapore.github.io#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "fdir": "^6.5.0",
+    "lightningcss": "^1.33.0",
+    "nanoid": "^3.3.18",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.5",
+    "postcss": "^8.5.26",
+    "rolldown": "^1.2.3",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.17"
+  }
+}
