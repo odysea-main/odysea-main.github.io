@@ -98,6 +98,13 @@ export const coreTeam: TeamMember[] = [
     link: 'https://www.comp.nus.edu.sg/disa/people/ngarcia/',
     image: '/assets/team/nicholasgarcia.jpg'
   },
+  { 
+    name: 'Yanni Kyriacos', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+    image: '/assets/team/yanni.jpg'
+  },
 ];
 
 export const teachingAssistants: TeamMember[] = [
