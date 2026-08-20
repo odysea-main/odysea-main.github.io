@@ -39,7 +39,7 @@ export const tracks: Track[] = [
     description: 'For those ready to commit to the full pilot and walk away with a project to show for it.',
     features: [
       'Express interest upfront',
-      'Attend at least 75% of sessions (max 3 absences across 8 weeks)',
+      'Attend at least 75% of sessions',
       'Complete a short capstone project',
       'Certificate of completion',
     ],

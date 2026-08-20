@@ -731,80 +731,168 @@ a {
    14. Get Involved Grid & Card Styles
    ========================================================================== */
 
-.get-involved-header {
-  max-width: 960px;
-  margin-bottom: 2.5rem;
+/* ==========================================================================
+   Dates & Launch Banner Section
+   ========================================================================== */
+/* ==========================================================================
+   Dates & Launch Banner Section
+   ========================================================================== */
+
+.dates {
+  padding: 5rem 0; /* Expanded section vertical padding */
 }
 
-.get-involved-header h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-top: 8px;
-}
-
-.get-involved-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.get-involved-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
+/* Card Container with gradient glow and centered column alignment */
+.dates-box {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg, 
+    var(--card-bg) 0%, 
+    rgba(6, 182, 212, 0.08) 50%, 
+    var(--card-bg) 100%
+  );
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 4rem 2rem; /* Clean vertical padding inside card */
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease;
 }
 
-.get-involved-card:hover {
-  background-color: var(--bg-surface-hover);
-  border-color: rgba(56, 189, 248, 0.3);
-  transform: translateY(-2px);
+.dates-box:hover {
+  border-color: rgba(6, 182, 212, 0.4);
 }
 
-.get-involved-card .card-icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 1rem;
-  line-height: 1;
+/* Optional top decorative accent line */
+.dates-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    var(--accent-secondary) 50%, 
+    transparent 100%
+  );
 }
 
-.get-involved-card h3 {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  margin: 0 0 0.5rem 0;
+/* Reset default margins for controlled vertical stack */
+.dates-box h2,
+.dates-box p,
+.dates-meta,
+.dates-sub {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.get-involved-card p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
+/* Eyebrow / Label */
+.dates-box .eyebrow {
+  display: inline-block;
+  color: var(--accent-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 
-.get-involved-link {
+/* Main Heading */
+.dates-box h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+/* Meta Details Strip */
+.dates-meta {
+  font-family: var(--font-body);
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  color: var(--accent);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem); /* h3 font size */
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.dates-meta .dot {
+  color: var(--accent-secondary);
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Description Subtext */
+.dates-box .dates-sub {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-top: 0;
+  margin-bottom: 1.5rem; 
+}
+
+/* CTA Action Wrapper & Button */
+.dates-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.5rem; /* Extra breathing space for CTA placement */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
-.get-involved-link span {
-  display: inline-block;
-  transition: transform 0.2s ease;
+.btn-primary {
+  background-color: var(--accent-secondary);
+  color: #0a0c10;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
 }
 
-.get-involved-link:hover {
-  color: var(--accent-hover);
+.btn-primary:hover {
+  background-color: #22d3ee;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.45);
 }
 
-.get-involved-link:hover span {
-  transform: translateX(5px);
+.btn-large {
+  padding: 0.95rem 2.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .dates-box {
+    padding: 3rem 1.25rem;
+  }
+  
+  .btn-large {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+  }
 }
 
 /* ==========================================================================
