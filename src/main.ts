@@ -68,23 +68,44 @@ function renderStats(containerId: string, items: Stat[], valueClass: string, lab
     .join('');
 }
 
-function renderTeam(containerId: string, members: TeamMember[], bioPlaceholder: string, photoPlaceholder: string): void {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  el.innerHTML = members
-    .map((m) => {
-      const institutionSuffix = m.institution === undefined ? '' : m.institution || ' <!-- TODO: institution -->';
-      return `
-    <div class="team-card reveal">
-      <div class="team-avatar-wrapper">${photoPlaceholder}</div>
-      <div class="team-info">
-        <h3>${m.name || '<!-- TODO: name -->'}</h3>
-        <p class="team-role">${m.role}${institutionSuffix}</p>
-        <p class="team-bio">${m.bio || bioPlaceholder}</p>
+function renderTeamSection(containerId: string, teamData: TeamMember[]): void {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  
+  container.innerHTML = teamData.map(member => {
+    // Generate avatar HTML
+    const avatarHtml = (member.image && member.image.trim() !== '') ? `
+      <div class="team-avatar-wrap">
+        ${member.link 
+          ? `<a href="${member.link}" target="_blank" rel="noopener noreferrer" aria-label="${member.name}'s profile">
+              <img src="${member.image}" alt="${member.name}" class="team-avatar" loading="lazy" />
+            </a>`
+          : `<img src="${member.image}" alt="${member.name}" class="team-avatar" loading="lazy" />`
+        }
       </div>
-    </div>`;
-    })
-    .join('');
+    ` : '';
+
+    // Generate themed globe icon positioned at top right
+    const globeHtml = member.link ? `
+      <a href="${member.link}" target="_blank" rel="noopener noreferrer" class="card-globe-link" aria-label="${member.name}'s profile" title="Profile / Website">
+        <svg class="icon-globe" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4.07c.83 1.2 1.5 2.62 1.91 3.93h-3.82c.41-1.31 1.08-2.73 1.91-3.93zM4.26 14a7.82 7.82 0 0 1 0-4h3.38a17.2 17.2 0 0 0 0 4zm.81 2h2.95a15.65 15.65 0 0 0 1.38 3.56A8.03 8.03 0 0 1 5.07 16zm2.95-8H5.07a8.03 8.03 0 0 1 2.53-3.56A15.65 15.65 0 0 0 8.02 8zM12 19.93c-.83-1.2-1.5-2.62-1.91-3.93h3.82c-.41 1.31-1.08 2.73-1.91 3.93zM13.97 14h-3.94a15.2 15.2 0 0 1 0-4h3.38a15.2 15.2 0 0 1 0 4zm2.01 5.56a15.65 15.65 0 0 0 1.38-3.56h2.95a8.03 8.03 0 0 1-2.53 3.56zM16.36 14a17.2 17.2 0 0 0 0-4h3.38a7.82 7.82 0 0 1 0 4z"/>
+        </svg>
+      </a>
+    ` : '';
+
+    return `
+      <div class="card team-card">
+        ${globeHtml}
+        ${avatarHtml}
+        <div class="team-info">
+          <h4>${member.name}</h4>
+          <p class="team-role">${member.role}</p>
+          ${member.description ? `<p class="team-desc">${member.description}</p>` : ''}
+        </div>
+      </div>
+    `;
+  }).join("");
 }
 
 function renderGetInvolved(containerId: string, options: GetInvolvedOption[]): void {
@@ -115,10 +136,10 @@ renderTracks('tracks-grid', tracks);
 renderCards('curriculum-grid', curriculumTopics);
 renderStats('format-grid', formatStats, 'format-value', 'format-label', 'format-stat');
 renderStats('stats-grid', precedentStats, 'stat-value', 'stat-label', 'stat-card');
-renderTeam('core-team-grid', coreTeam, '<!-- TODO: replace with core team bio -->', '<!-- TODO: replace with core team photo -->');
-renderTeam('team-grid', teachingAssistants, '<!-- TODO: replace with TA bio -->', '<!-- TODO: replace with TA photo -->');
-renderTeam('iliad-advisors-grid', iliadAdvisors, '<!-- TODO: replace with advisor bio -->', '<!-- TODO: replace with advisor photo -->');
-renderTeam('external-advisors-grid', externalAdvisors, '<!-- TODO: replace with advisor bio -->', '<!-- TODO: replace with advisor photo -->');
+renderTeamSection("core-team-grid", coreTeam);
+renderTeamSection("team-grid", teachingAssistants);
+renderTeamSection("iliad-advisors-grid", iliadAdvisors);
+renderTeamSection("external-advisors-grid", externalAdvisors);
 renderCards('who-its-for-grid', whoItsFor);
 renderGetInvolved('get-involved-grid', getInvolvedOptions);
 

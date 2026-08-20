@@ -394,6 +394,94 @@ a {
   max-width: 62ch;
 }
 
+/* Team Card Layout */
+.team-card {
+  position: relative; /* Enables absolute positioning for top-right icon */
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  padding-right: 3rem; /* Reserve space so text doesn't overlap the globe icon */
+}
+
+.team-avatar-wrap {
+  flex-shrink: 0;
+}
+
+/* Avatar Image Styles */
+.team-avatar {
+  width: 96px;  /* Increased from 60px (adjust to 80px - 100px as preferred) */
+  height: 96px; /* Increased from 60px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+/* Hover effect on avatar links */
+.team-avatar-wrap a:hover .team-avatar {
+  border-color: var(--accent-secondary);
+  transform: scale(1.05);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.team-info h4 {
+  margin: 0 0 0.35rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.globe-link {
+  text-decoration: none;
+  font-size: 0.85em;
+  margin-left: 0.4rem;
+  transition: opacity 0.2s;
+}
+
+.globe-link:hover {
+  opacity: 0.7;
+}
+
+.team-role {
+  font-size: 0.875rem;
+  color: var(--accent-secondary);
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+
+.team-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Absolute Top-Right Globe Link */
+.card-globe-link {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  color: var(--accent-secondary); /* Theme cyan color */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.team-role {
+  margin-bottom: 0.75rem !important;
+}
+
+
 /* ==========================================================================
    8. Cards (Curriculum / Who it's for — shared grid pattern)
    ========================================================================== */

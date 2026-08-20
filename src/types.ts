@@ -22,10 +22,11 @@ export interface Stat {
 }
 
 export interface TeamMember {
-  name?: string;
+  name: string;
   role: string;
-  institution?: string;
-  bio?: string;
+  description?: string;
+  link?: string;   // External URL for the globe & image link
+  image?: string;  // Local image path (e.g., '/assets/team/jane.jpg')
 }
 
 export interface GetInvolvedOption {

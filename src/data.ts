@@ -77,21 +77,92 @@ export const precedentStats: Stat[] = [
 ];
 
 export const coreTeam: TeamMember[] = [
-  { role: 'Founding Organizer', institution: '' },
-  { role: 'Program Lead', institution: '' },
+  { 
+    name: 'Jared Cheang', 
+    role: 'Project Manager', 
+    // description: 'Guiding the regional strategy and core community growth.',
+    link: 'https://www.linkedin.com/in/jared-cheang/',
+    image: '/assets/team/jared.jpg'
+  },
+  { 
+    name: 'Valerie Pang', 
+    role: 'Program Lead', 
+    // description: 'Overseeing curriculum adaptation and weekly cohort operations.',
+    link: 'https://www.linkedin.com/in/valeriepang/',
+    image: '/assets/team/valerie.jpg'
+  },
+  { 
+    name: 'Nicholas Garcia', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    link: 'https://www.comp.nus.edu.sg/disa/people/ngarcia/',
+    image: '/assets/team/nicholasgarcia.jpg'
+  },
 ];
 
 export const teachingAssistants: TeamMember[] = [
-  { role: 'Teaching Assistant · MSc/PhD candidate', institution: '' },
-  { role: 'Teaching Assistant · MSc/PhD candidate', institution: '' },
+  { 
+    name: 'Shashvat Shukla', 
+    role: 'PhD Candidate in Quantum Computer Science, University College London', 
+    // description: 'Researching mechanistic interpretability at aaa.',
+    link: 'https://scholar.google.com/citations?user=NAT7yTUAAAAJ&hl=en',
+    image: '/assets/team/shashvat.jpg'
+  },
+  { 
+    name: 'James Ang Ming Liang', 
+    role: 'PhD Candidate in Foundational AI, University College London', 
+    // description: 'Focusing on reward modeling and behavioral alignment at aaa.',
+    link: 'https://scholar.google.com/citations?user=hepV8W8AAAAJ&hl=en',
+    image: '/assets/team/mingliang.jpg'
+  },
+  { 
+    name: 'Nicholas Chen', 
+    role: 'Research Scientist, National University of Singapore', 
+    // description: 'MSc in Mathematical and Theoretical Physics, Oxford University.',
+    link: 'https://scholar.google.com/citations?user=mBM4R48AAAAJ',
+    image: '/assets/team/nicholaschen.jpg'
+  },
+  { 
+    name: 'Daniel Tan*', 
+    role: 'Incoming Researcher at Arcadia Impact, PhD University College London', 
+    description: 'Pending Confirmation',
+    link: 'https://scholar.google.com/citations?user=QKO1QacAAAAJ&hl=en',
+    image: '/assets/team/danieltan.jpg'
+  },
 ];
 
 export const iliadAdvisors: TeamMember[] = [
-  { name: 'Leon', role: 'Advisor, Iliad' },
+  { 
+    name: 'Leon Lang', 
+    role: 'Overall Curriculum Advisor',
+    // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
+    // link: 'https://example.com',
+    image: '/assets/advisors/leonlang.jpg'
+  },
+  { 
+    name: 'David Quarel', 
+    role: 'Advisor - RL, AIXI',
+    // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
+    // link: 'https://example.com',
+    image: '/assets/advisors/davidquarel.jpg'
+  },
+  { 
+    name: 'Kai Ogden', 
+    role: 'Advisor - SLT',
+    // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
+    // link: 'https://example.com',
+    image: '/assets/advisors/kaiogden.jpg'
+  },
 ];
 
 export const externalAdvisors: TeamMember[] = [
-  { role: 'External Advisor', institution: '' },
+  // { 
+  //   name: 'Nicholas Garcia', 
+  //   role: 'External Advisor', 
+  //   description: 'Bringing additional perspective from the regional AI safety landscape.',
+  //   link: 'https://example.com',
+  //   image: '/assets/team/sarah.jpg'
+  // },
 ];
 
 export const getInvolvedOptions: GetInvolvedOption[] = [
