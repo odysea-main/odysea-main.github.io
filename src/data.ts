@@ -48,12 +48,10 @@ export const tracks: Track[] = [
 ];
 
 export const curriculumTopics: Card[] = [
-  { title: 'Agent Foundations & Decision Theory', description: 'A first, gentle pass at how we formally reason about agents, their goals, and the decisions they make.' },
-  { title: 'Learning Theory & Generalization', description: 'An intro to why learned systems behave the way they do, and where that reasoning starts to break down.' },
-  { title: 'Interpretability', description: "A beginner-friendly look inside models, to build intuition for what they're actually representing and doing." },
-  { title: 'Value Alignment & Corrigibility', description: "The foundational ideas behind getting systems to reliably pursue what we actually want, and stay correctable if they don't." },
-  { title: 'Robustness & Evaluations', description: "An entry point into stress testing systems and how we measure whether they're actually safe." },
-  { title: 'AI Governance & Strategy', description: 'A grounding in the policy, coordination, and strategic landscape around advanced AI.' },
+  { title: 'Singular Learning Theory', description: 'A gentle introduction to the geometry of the loss landscape, and why it matters for understanding what a trained model actually learned.' },
+  { title: 'Training Dynamics', description: 'An intro to how models change over the course of training, including the phase transitions and emergent behavior along the way.' },
+  { title: 'Decision Theory', description: 'A beginner-friendly look at how to formally reason about agents, their goals, and the decisions they make.' },
+  { title: 'Reinforcement Learning', description: 'The foundational ideas behind how agents learn from reward, and where that learning can go wrong.' },
 ];
 
 export const whoItsFor: Card[] = [
