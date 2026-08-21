@@ -141,21 +141,21 @@ export const teachingAssistants: TeamMember[] = [
 export const iliadAdvisors: TeamMember[] = [
   { 
     name: 'Leon Lang', 
-    role: 'Overall Curriculum Advisor',
+    role: 'Overall Curriculum Advisor, Iliad',
     // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
     // link: 'https://example.com',
     image: '/assets/advisors/leonlang.jpg'
   },
   { 
     name: 'David Quarel', 
-    role: 'Advisor - RL, AIXI',
+    role: 'Curriculum Advisor, Iliad',
     // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
     // link: 'https://example.com',
     image: '/assets/advisors/davidquarel.jpg'
   },
   { 
     name: 'Kai Ogden', 
-    role: 'Advisor - SLT',
+    role: 'Curriculum Advisor, Iliad',
     // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
     // link: 'https://example.com',
     image: '/assets/advisors/kaiogden.jpg'
