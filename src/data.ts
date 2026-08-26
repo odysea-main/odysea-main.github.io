@@ -78,59 +78,61 @@ export const coreTeam: TeamMember[] = [
   { 
     name: 'Jared Cheang', 
     role: 'Project Manager', 
-    // description: 'Guiding the regional strategy and core community growth.',
+    description: 'AI Safety researcher exploring Human-AI Alignment and AI Control.',
     link: 'https://www.linkedin.com/in/jared-cheang/',
     image: '/assets/team/jared.jpg'
   },
   { 
     name: 'Valerie Pang', 
-    role: 'Program Lead', 
-    // description: 'Overseeing curriculum adaptation and weekly cohort operations.',
+    role: 'Operations Lead', 
+    description: 'SASH program manager building Singapore\'s AI safety community.',
     link: 'https://www.linkedin.com/in/valeriepang/',
     image: '/assets/team/valerie.jpg'
   },
   { 
-    name: 'Nicholas Garcia', 
-    role: 'Program Advisor', 
-    // description: 'Bringing additional perspective from the regional AI safety landscape.',
-    link: 'https://www.comp.nus.edu.sg/disa/people/ngarcia/',
-    image: '/assets/team/nicholasgarcia.jpg'
+    name: 'Chanel Huang', 
+    role: 'Logistics Coordinator', 
+    description: 'AI-For-Good advocate connecting community, industry, and impact.',
+    link: 'https://www.linkedin.com/in/chanelxn/',
+    image: '/assets/team/chanel.jpg'
   },
   { 
-    name: 'Yanni Kyriacos', 
-    role: 'Program Advisor', 
-    // description: 'Bringing additional perspective from the regional AI safety landscape.',
-    link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
-    image: '/assets/team/yanni.jpg'
+    name: 'Rustam Shariq', 
+    role: 'Community Lead', 
+    description: 'Health-AI policy scientist linking ASEAN youth and innovation.',
+    link: 'https://sg.linkedin.com/in/rustamshariq/',
+    image: '/assets/team/rustam.jpg'
   },
+  
 ];
 
 export const teachingAssistants: TeamMember[] = [
   { 
     name: 'Shashvat Shukla', 
     role: 'PhD Candidate in Quantum Computer Science, University College London', 
-    // description: 'Researching mechanistic interpretability at aaa.',
+    description: 'Quantum algorithms PhD at UCL, ex-Oxford CS & Philosophy.',
     link: 'https://scholar.google.com/citations?user=NAT7yTUAAAAJ&hl=en',
     image: '/assets/team/shashvat.jpg'
   },
   { 
     name: 'James Ang Ming Liang', 
     role: 'PhD Candidate in Foundational AI, University College London', 
-    // description: 'Focusing on reward modeling and behavioral alignment at aaa.',
+    description: 'ELLIS PhD at UCL, decoding how foundation models generalize.',
     link: 'https://scholar.google.com/citations?user=hepV8W8AAAAJ&hl=en',
     image: '/assets/team/mingliang.jpg'
   },
   { 
     name: 'Nicholas Chen', 
     role: 'Research Scientist, National University of Singapore', 
-    // description: 'MSc in Mathematical and Theoretical Physics, Oxford University.',
+    description: 'Research Scientist steering LLM behavior, ex-Oxford physicist.',
     link: 'https://scholar.google.com/citations?user=mBM4R48AAAAJ',
     image: '/assets/team/nicholaschen.jpg'
   },
   { 
     name: 'Daniel Tan*', 
-    role: 'Incoming Researcher at Arcadia Impact, PhD University College London', 
+    role: 'Incoming Researcher at Arcadia Impact', 
     description: 'Pending Confirmation',
+    // description: 'Alignment Researcher at Arcadia Impact, UCL PhD, MATS alumni under Owain Evans.',
     link: 'https://scholar.google.com/citations?user=QKO1QacAAAAJ&hl=en',
     image: '/assets/team/danieltan.jpg'
   },
@@ -158,6 +160,27 @@ export const iliadAdvisors: TeamMember[] = [
     // link: 'https://example.com',
     image: '/assets/advisors/kaiogden.jpg'
   },
+  { 
+    name: 'Nicholas Garcia', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    // link: 'https://www.comp.nus.edu.sg/disa/people/ngarcia/',
+    image: '/assets/advisors/nicholasgarcia.jpg'
+  },
+  { 
+    name: 'Yanni Kyriacos', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+    image: '/assets/advisors/yanni.jpg'
+  },
+  { 
+    name: 'Caroline SC.', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+    image: '/assets/advisors/caroline.jpg'
+  }
 ];
 
 export const externalAdvisors: TeamMember[] = [
