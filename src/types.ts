@@ -29,6 +29,12 @@ export interface TeamMember {
   image?: string;  // Local image path (e.g., '/assets/team/jane.jpg')
 }
 
+export interface JoinLink {
+  text: string;
+  href: string;
+  placeholder?: string;
+}
+
 export interface GetInvolvedOption {
   icon: string;
   title: string;

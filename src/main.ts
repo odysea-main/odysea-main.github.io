@@ -9,10 +9,11 @@ import {
   coreTeam,
   teachingAssistants,
   iliadAdvisors,
+  joinLink,
   externalAdvisors,
   getInvolvedOptions,
 } from './data';
-import type { NavItem, Track, Card, Stat, TeamMember, GetInvolvedOption } from './types';
+import type { NavItem, Track, Card, Stat, TeamMember, GetInvolvedOption, JoinLink } from './types';
 
 // --- Render helpers: each fills one container from a data.ts array ---
 
@@ -128,6 +129,16 @@ function renderGetInvolved(containerId: string, options: GetInvolvedOption[]): v
     .join('');
 }
 
+function renderJoinLink(elementId: string, link: JoinLink): void {
+  const el = document.getElementById(elementId) as HTMLAnchorElement | null;
+  if (!el) return;
+  el.textContent = link.text;
+  el.setAttribute('href', link.href);
+  if (link.placeholder) {
+    el.dataset.placeholder = link.placeholder;
+  }
+}
+
 // --- Populate every data-driven section before anything else runs ---
 
 renderNav('primary-nav', navItems);
@@ -142,6 +153,9 @@ renderTeamSection("iliad-advisors-grid", iliadAdvisors);
 renderTeamSection("external-advisors-grid", externalAdvisors);
 renderCards('who-its-for-grid', whoItsFor);
 renderGetInvolved('get-involved-grid', getInvolvedOptions);
+renderJoinLink('header-cta', joinLink);
+renderJoinLink('hero-cta', joinLink);
+renderJoinLink('dates-cta', joinLink);
 
 // Footer year
 const yearEl = document.getElementById('year');

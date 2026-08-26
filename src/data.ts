@@ -1,4 +1,4 @@
-import { NavItem, Track, Card, Stat, TeamMember, GetInvolvedOption } from './types';
+import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption } from './types';
 
 // --- Southeast Asia (SEA) is the framing for this pilot: content below refers
 // to the region generally, not Singapore specifically, except where the
@@ -193,13 +193,19 @@ export const externalAdvisors: TeamMember[] = [
   // },
 ];
 
+export const joinLink: JoinLink = {
+  text: 'Join the Voyage',
+  href: '#',
+  placeholder: 'apply-form',
+};
+
 export const getInvolvedOptions: GetInvolvedOption[] = [
   {
     icon: '🎓',
     title: 'Join as a participant',
     description: 'Pick Explorer or Fellow, free either way. Tell us a bit about yourself and what draws you to AI safety.',
-    linkText: 'Apply to join',
-    href: '#',
-    placeholder: 'apply-form',
+    linkText: joinLink.text,
+    href: joinLink.href,
+    placeholder: joinLink.placeholder ?? '',
   },
 ];
