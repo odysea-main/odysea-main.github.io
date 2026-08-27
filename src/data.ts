@@ -195,7 +195,7 @@ export const externalAdvisors: TeamMember[] = [
 
 export const joinLink: JoinLink = {
   text: 'Join the Voyage',
-  href: '#',
+  href: 'https://airtable.com/appMDN5h1uIDq0kJU/pagjV8jduFzAnwR9X/form',
   placeholder: 'apply-form',
 };
 
