@@ -83,13 +83,6 @@ export const coreTeam: TeamMember[] = [
     image: '/assets/team/jared.jpg'
   },
   { 
-    name: 'Valerie Pang', 
-    role: 'Operations Lead', 
-    description: 'SASH program manager building Singapore\'s AI safety community.',
-    link: 'https://www.linkedin.com/in/valeriepang/',
-    image: '/assets/team/valerie.jpg'
-  },
-  { 
     name: 'Chanel Huang', 
     role: 'Logistics Coordinator', 
     description: 'AI-For-Good advocate connecting community, industry, and impact.',
@@ -140,12 +133,17 @@ export const teachingAssistants: TeamMember[] = [
 
 export const iliadAdvisors: TeamMember[] = [
   { 
-    name: 'Leon Lang', 
-    role: 'Overall Curriculum Advisor, Iliad',
-    // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
-    // link: 'https://example.com',
-    image: '/assets/advisors/leonlang.jpg'
+    name: 'Valerie Pang', 
+    role: 'Program Advisor', 
+    image: '/assets/team/valerie.jpg'
   },
+  // { 
+  //   name: 'Leon Lang', 
+  //   role: 'Overall Curriculum Advisor, Iliad',
+  //   // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
+  //   // link: 'https://example.com',
+  //   image: '/assets/advisors/leonlang.jpg'
+  // },
   { 
     name: 'David Quarel', 
     role: 'Curriculum Advisor, Iliad',
@@ -153,13 +151,13 @@ export const iliadAdvisors: TeamMember[] = [
     // link: 'https://example.com',
     image: '/assets/advisors/davidquarel.jpg'
   },
-  { 
-    name: 'Kai Ogden', 
-    role: 'Curriculum Advisor, Iliad',
-    // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
-    // link: 'https://example.com',
-    image: '/assets/advisors/kaiogden.jpg'
-  },
+  // { 
+  //   name: 'Kai Ogden', 
+  //   role: 'Curriculum Advisor, Iliad',
+  //   // description: 'Ensuring topic selection remains pedagogically sound and technically grounded.',
+  //   // link: 'https://example.com',
+  //   image: '/assets/advisors/kaiogden.jpg'
+  // },
   { 
     name: 'Nicholas Garcia', 
     role: 'Program Advisor', 
@@ -167,20 +165,20 @@ export const iliadAdvisors: TeamMember[] = [
     // link: 'https://www.comp.nus.edu.sg/disa/people/ngarcia/',
     image: '/assets/advisors/nicholasgarcia.jpg'
   },
-  { 
-    name: 'Yanni Kyriacos', 
-    role: 'Program Advisor', 
-    // description: 'Bringing additional perspective from the regional AI safety landscape.',
-    // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
-    image: '/assets/advisors/yanni.jpg'
-  },
-  { 
-    name: 'Caroline SC.', 
-    role: 'Program Advisor', 
-    // description: 'Bringing additional perspective from the regional AI safety landscape.',
-    // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
-    image: '/assets/advisors/caroline.jpg'
-  }
+  // { 
+  //   name: 'Yanni Kyriacos', 
+  //   role: 'Program Advisor', 
+  //   // description: 'Bringing additional perspective from the regional AI safety landscape.',
+  //   // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+  //   image: '/assets/advisors/yanni.jpg'
+  // },
+  // { 
+  //   name: 'Caroline SC.', 
+  //   role: 'Program Advisor', 
+  //   // description: 'Bringing additional perspective from the regional AI safety landscape.',
+  //   // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+  //   image: '/assets/advisors/caroline.jpg'
+  // }
 ];
 
 export const externalAdvisors: TeamMember[] = [
