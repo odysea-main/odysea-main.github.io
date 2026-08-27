@@ -116,8 +116,8 @@ export const teachingAssistants: TeamMember[] = [
   },
   { 
     name: 'Nicholas Chen', 
-    role: 'Research Scientist, National University of Singapore', 
-    description: 'Research Scientist steering LLM behavior, ex-Oxford physicist.',
+    role: 'Research Scientist, Stealth', 
+    description: 'Research Scientist securing LLM agents with symbolic AI, ex-Oxford Mathematical & Theoretical Physics.',
     link: 'https://scholar.google.com/citations?user=mBM4R48AAAAJ',
     image: '/assets/team/nicholaschen.jpg'
   },
