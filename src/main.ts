@@ -70,6 +70,26 @@ function renderStats(containerId: string, items: Stat[], valueClass: string, lab
     .join('');
 }
 
+const presenterColors: Record<string, string> = {
+  'Shashvat': '#e0ecff',
+  'Daniel': '#e5f7ec',
+  'Nicholas': '#fdeee0',
+  'Ming Liang': '#f3e8fd',
+};
+
+const presenterTextColors: Record<string, string> = {
+  'Shashvat': '#2450b3',
+  'Daniel': '#1f8a4c',
+  'Nicholas': '#c25a12',
+  'Ming Liang': '#7a3fc2',
+};
+
+function renderPresenterBadge(name: string): string {
+  const bg = presenterColors[name] || '#eef0f3';
+  const fg = presenterTextColors[name] || '#333';
+  return `<span class="presenter-badge" style="background-color:${bg}; color:${fg};">${name}</span>`;
+}
+
 function renderCurriculum(): void {
   const container = document.getElementById('curriculum-body');
   if (!container) return;
@@ -86,7 +106,7 @@ function renderCurriculum(): void {
             ${row.themes.map(t => `<li>${t}</li>`).join('')}
           </ul>
         </td>
-        <td data-label="Presenter">${row.presenter}</td>
+        <td data-label="Presenter">${renderPresenterBadge(row.presenter)}</td>
       </tr>
     `
     )

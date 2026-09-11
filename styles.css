@@ -863,6 +863,16 @@ a {
   width: 100%;
 }
 
+.presenter-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-body), sans-serif;
+  white-space: nowrap;
+}
+
 /* Mobile: stack rows as cards */
 @media (max-width: 640px) {
   .curriculum-table thead { display: none; }
