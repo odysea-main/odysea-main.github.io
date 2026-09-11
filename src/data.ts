@@ -121,14 +121,14 @@ export const teachingAssistants: TeamMember[] = [
     link: 'https://scholar.google.com/citations?user=mBM4R48AAAAJ',
     image: '/assets/team/nicholaschen.jpg'
   },
-  // { 
-  //   name: 'Daniel Tan*', 
-  //   role: 'Incoming Researcher at Arcadia Impact', 
-  //   description: 'Pending Confirmation',
-  //   // description: 'Alignment Researcher at Arcadia Impact, UCL PhD, MATS alumni under Owain Evans.',
-  //   link: 'https://scholar.google.com/citations?user=QKO1QacAAAAJ&hl=en',
-  //   image: '/assets/team/danieltan.jpg'
-  // },
+  { 
+    name: 'Daniel Tan', 
+    role: 'Alignment Research Lead, Arcadia Impact', 
+    // description: 'Pending Confirmation',
+    description: 'Alignment Research Lead at Arcadia Impact, UCL PhD, MATS alumni under Owain Evans.',
+    link: 'https://scholar.google.com/citations?user=QKO1QacAAAAJ&hl=en',
+    image: '/assets/team/danieltan.jpg'
+  },
 ];
 
 export const iliadAdvisors: TeamMember[] = [
