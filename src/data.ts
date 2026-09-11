@@ -40,7 +40,7 @@ export const tracks: Track[] = [
     features: [
       'Express interest upfront',
       'Attend at least 75% of sessions',
-      'Complete a short capstone project',
+      'Capstone project',
       'Certificate of completion',
     ],
     featured: true,
