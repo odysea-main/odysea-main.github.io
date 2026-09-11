@@ -833,6 +833,7 @@ a {
   border-collapse: collapse;
   font-family: var(--font-body), sans-serif;
   font-size: 0.95rem;
+  background-color: var(--bg-surface-hover); /* gentle shade off your base background */
 }
 
 .curriculum-table thead th {
@@ -862,29 +863,12 @@ a {
   width: 100%;
 }
 
-.curriculum-table th:nth-child(1),
-.curriculum-table td:nth-child(1) { width: 6%; }   /* Week */
-
-.curriculum-table th:nth-child(2),
-.curriculum-table td:nth-child(2) { width: 10%; }  /* Date */
-
-.curriculum-table th:nth-child(3),
-.curriculum-table td:nth-child(3) { width: 20%; }  /* Chapter */
-
-.curriculum-table th:nth-child(4),
-.curriculum-table td:nth-child(4) { width: 34%; }  /* Themes */
-
-.curriculum-table th:nth-child(5),
-.curriculum-table td:nth-child(5) { width: 15%; }  /* Material */
-
-.curriculum-table th:nth-child(6),
-.curriculum-table td:nth-child(6) { width: 15%; }  /* Presenter */
-
 /* Mobile: stack rows as cards */
 @media (max-width: 640px) {
   .curriculum-table thead { display: none; }
   .curriculum-table, .curriculum-table tbody, .curriculum-table tr, .curriculum-table td {
-    display: block; width: 100%;
+    display: block; 
+    width: 100% !important; /* override desktop nth-child widths */
   }
   .curriculum-table tr {
     padding: 0.75rem 1rem;
@@ -900,6 +884,24 @@ a {
     font-family: 'Space Grotesk', sans-serif;
   }
 }
+
+.curriculum-table th:nth-child(1),
+.curriculum-table td:nth-child(1) { width: 6%; }   /* Week */
+
+.curriculum-table th:nth-child(2),
+.curriculum-table td:nth-child(2) { width: 10%; }  /* Date */
+
+.curriculum-table th:nth-child(3),
+.curriculum-table td:nth-child(3) { width: 24%; }  /* Chapter */
+
+.curriculum-table th:nth-child(4),
+.curriculum-table td:nth-child(4) { width: 40%; }  /* Themes */
+
+.curriculum-table th:nth-child(5),
+.curriculum-table td:nth-child(5) { width: 20%; }  /* Presenter */
+
+/* .curriculum-table th:nth-child(6),
+.curriculum-table td:nth-child(6) { width: 15%; }  /* Material */
 
 .theme-list {
   margin: 0;

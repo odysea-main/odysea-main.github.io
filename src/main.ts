@@ -86,7 +86,6 @@ function renderCurriculum(): void {
             ${row.themes.map(t => `<li>${t}</li>`).join('')}
           </ul>
         </td>
-        <td data-label="Material">${row.material}</td>
         <td data-label="Presenter">${row.presenter}</td>
       </tr>
     `
