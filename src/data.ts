@@ -1,4 +1,4 @@
-import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption } from './types';
+import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption, CurriculumWeek } from './types';
 
 // --- Southeast Asia (SEA) is the framing for this pilot: content below refers
 // to the region generally, not Singapore specifically, except where the
@@ -206,4 +206,15 @@ export const getInvolvedOptions: GetInvolvedOption[] = [
     href: joinLink.href,
     placeholder: joinLink.placeholder ?? '',
   },
+];
+
+export const curriculumData: CurriculumWeek[] = [
+  { week: 1, date: '23 Sep', chapter: 'Alignment: An Introduction', themes: ['Alignment introduction', 'Alignment targets'], material: 'A1', presenter: 'Shashvat' },
+  { week: 2, date: '30 Sep', chapter: 'AI Alignment', themes: ['Alignment problem decompositions', 'Basic AI drives'], material: 'A1, A2', presenter: 'Shashvat' },
+  { week: 3, date: '7 Oct', chapter: 'Alignment in Practice', themes: ['Alignment in practice'], material: 'A2', presenter: 'Daniel' },
+  { week: 4, date: '14 Oct', chapter: 'Principles of Learning', themes: ['Why DL works so well'], material: 'B1', presenter: 'Nicholas' },
+  { week: 5, date: '21 Oct', chapter: 'Mechanistic Interpretability', themes: ['Techniques and findings in Mech Interp'], material: 'C2', presenter: 'Nicholas' },
+  { week: 6, date: '28 Oct', chapter: 'Reinforcement Learning', themes: ['Decision theory and RL', 'RL-related risks/alignment issues', 'Challenges in formalising "good" decision-making'], material: 'D1, D5.1', presenter: 'Nicholas' },
+  { week: 7, date: '4 Nov', chapter: 'Training Dynamics', themes: ['Intro to learning dynamics', 'Methodologies and applications'], material: 'B3, B4', presenter: 'Ming Liang' },
+  { week: 8, date: '11 Nov', chapter: 'Singular Learning Theory', themes: ['Intro to SLT', 'Methodologies and applications'], material: 'B3, B4', presenter: 'Ming Liang' },
 ];

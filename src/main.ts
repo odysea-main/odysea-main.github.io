@@ -12,6 +12,7 @@ import {
   joinLink,
   externalAdvisors,
   getInvolvedOptions,
+  curriculumData,
 } from './data';
 import type { NavItem, Track, Card, Stat, TeamMember, GetInvolvedOption, JoinLink } from './types';
 
@@ -65,6 +66,30 @@ function renderStats(containerId: string, items: Stat[], valueClass: string, lab
       <span class="${valueClass}">${stat.value}</span>
       <span class="${labelClass}">${stat.label}</span>
     </div>`
+    )
+    .join('');
+}
+
+function renderCurriculum(): void {
+  const container = document.getElementById('curriculum-body');
+  if (!container) return;
+
+  container.innerHTML = curriculumData
+    .map(
+      (row) => `
+      <tr>
+        <td data-label="Week">${row.week}</td>
+        <td data-label="Date">${row.date}</td>
+        <td data-label="Chapter">${row.chapter}</td>
+        <td data-label="Themes">
+          <ul class="theme-list">
+            ${row.themes.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+        </td>
+        <td data-label="Material">${row.material}</td>
+        <td data-label="Presenter">${row.presenter}</td>
+      </tr>
+    `
     )
     .join('');
 }
@@ -147,6 +172,7 @@ renderTracks('tracks-grid', tracks);
 renderCards('curriculum-grid', curriculumTopics);
 renderStats('format-grid', formatStats, 'format-value', 'format-label', 'format-stat');
 renderStats('stats-grid', precedentStats, 'stat-value', 'stat-label', 'stat-card');
+renderCurriculum();
 renderTeamSection("core-team-grid", coreTeam);
 renderTeamSection("team-grid", teachingAssistants);
 renderTeamSection("iliad-advisors-grid", iliadAdvisors);

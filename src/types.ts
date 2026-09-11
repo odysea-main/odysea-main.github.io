@@ -43,3 +43,12 @@ export interface GetInvolvedOption {
   href: string;
   placeholder: string;
 }
+
+export interface CurriculumWeek {
+  week: number;
+  date: string;
+  chapter: string;
+  themes: string[];
+  material: string;
+  presenter: string;
+}

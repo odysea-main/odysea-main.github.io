@@ -817,6 +817,105 @@ a {
 }
 
 /* ==========================================================================
+   Curriculum Table
+   ========================================================================== */
+
+
+
+.curriculum-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.curriculum-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.95rem;
+}
+
+.curriculum-table thead th {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.curriculum-table tbody td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  vertical-align: top;
+}
+
+.curriculum-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.curriculum-table tbody tr:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.curriculum-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.curriculum-table th:nth-child(1),
+.curriculum-table td:nth-child(1) { width: 6%; }   /* Week */
+
+.curriculum-table th:nth-child(2),
+.curriculum-table td:nth-child(2) { width: 10%; }  /* Date */
+
+.curriculum-table th:nth-child(3),
+.curriculum-table td:nth-child(3) { width: 20%; }  /* Chapter */
+
+.curriculum-table th:nth-child(4),
+.curriculum-table td:nth-child(4) { width: 34%; }  /* Themes */
+
+.curriculum-table th:nth-child(5),
+.curriculum-table td:nth-child(5) { width: 15%; }  /* Material */
+
+.curriculum-table th:nth-child(6),
+.curriculum-table td:nth-child(6) { width: 15%; }  /* Presenter */
+
+/* Mobile: stack rows as cards */
+@media (max-width: 640px) {
+  .curriculum-table thead { display: none; }
+  .curriculum-table, .curriculum-table tbody, .curriculum-table tr, .curriculum-table td {
+    display: block; width: 100%;
+  }
+  .curriculum-table tr {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .curriculum-table td {
+    border: none;
+    padding: 0.25rem 0;
+  }
+  .curriculum-table td::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+.theme-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.theme-list li {
+  margin-bottom: 0.3rem;
+}
+
+.theme-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    14. Get Involved Grid & Card Styles
    ========================================================================== */
 
