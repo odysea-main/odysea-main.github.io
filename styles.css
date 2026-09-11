@@ -826,6 +826,9 @@ a {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid rgba(0,0,0,0.08);
+  -webkit-overflow-scrolling: touch; /* smooth momentum scroll on iOS */
+  scrollbar-width: thin; /* Firefox */
+  position: relative;
 }
 
 .curriculum-table {
@@ -875,24 +878,11 @@ a {
 
 /* Mobile: stack rows as cards */
 @media (max-width: 640px) {
-  .curriculum-table thead { display: none; }
-  .curriculum-table, .curriculum-table tbody, .curriculum-table tr, .curriculum-table td {
-    display: block; 
-    width: 100% !important; /* override desktop nth-child widths */
+  .curriculum-table {
+    min-width: 720px; /* forces horizontal scroll instead of squeezing columns */
   }
-  .curriculum-table tr {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-  .curriculum-table td {
-    border: none;
-    padding: 0.25rem 0;
-  }
-  .curriculum-table td::before {
-    content: attr(data-label) ": ";
-    font-weight: 600;
-    font-family: 'Space Grotesk', sans-serif;
-  }
+
+  
 }
 
 .curriculum-table th:nth-child(1),
