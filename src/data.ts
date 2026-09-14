@@ -172,13 +172,13 @@ export const iliadAdvisors: TeamMember[] = [
   //   // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
   //   image: '/assets/advisors/yanni.jpg'
   // },
-  // { 
-  //   name: 'Caroline SC.', 
-  //   role: 'Program Advisor', 
-  //   // description: 'Bringing additional perspective from the regional AI safety landscape.',
-  //   // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
-  //   image: '/assets/advisors/caroline.jpg'
-  // }
+  { 
+    name: 'Caroline Shamiso', 
+    role: 'Program Advisor', 
+    // description: 'Bringing additional perspective from the regional AI safety landscape.',
+    // link: 'https://au.linkedin.com/in/yanni-kyriacos-2815b6261',
+    image: '/assets/advisors/caroline.jpg'
+  }
 ];
 
 export const externalAdvisors: TeamMember[] = [
