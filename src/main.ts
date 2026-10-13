@@ -13,6 +13,7 @@ import {
   externalAdvisors,
   getInvolvedOptions,
   curriculumData,
+  carouselSlides
 } from './data';
 import type { NavItem, Track, Card, Stat, TeamMember, GetInvolvedOption, JoinLink } from './types';
 
@@ -183,6 +184,106 @@ function renderJoinLink(elementId: string, link: JoinLink): void {
   }
 }
 
+function initGallery(): void {
+  const section = document.getElementById('gallery');
+  const track = document.getElementById('carousel-track');
+  const dots = document.getElementById('carousel-indicators');
+  const prev = document.getElementById('carousel-prev');
+  const next = document.getElementById('carousel-next');
+  const carousel = document.querySelector<HTMLElement>('.carousel');
+  const viewport = document.querySelector<HTMLElement>('.carousel-viewport');
+  if (!section || !track || !dots || !prev || !next || !carousel || !viewport) return;
+
+  const total = carouselSlides.length;
+  if (total === 0) {
+    section.hidden = true;
+    return;
+  }
+
+  track.innerHTML = carouselSlides
+    .map(
+      (s, i) => `
+    <figure class="carousel-slide" aria-roledescription="slide" aria-label="${i + 1} of ${total}">
+      <div class="carousel-image-wrap">
+        <img src="${s.imageSrc}" alt="${s.title}" loading="${i === 0 ? 'eager' : 'lazy'}">
+      </div>
+      <figcaption class="carousel-caption">
+        <span class="carousel-label">${s.label}</span>
+        <h3>${s.title}</h3>
+        <p>${s.description}</p>
+      </figcaption>
+    </figure>`
+    )
+    .join('');
+
+  dots.innerHTML = carouselSlides
+    .map((_, i) => `<button class="indicator" type="button" data-index="${i}" aria-label="Go to photo ${i + 1}"></button>`)
+    .join('');
+
+  const slides = track.querySelectorAll<HTMLElement>('.carousel-slide');
+  const indicators = dots.querySelectorAll<HTMLButtonElement>('.indicator');
+  let index = 0;
+
+  const goTo = (i: number): void => {
+    index = (i + total) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((el, n) => el.setAttribute('aria-hidden', String(n !== index)));
+    indicators.forEach((el, n) => {
+      el.classList.toggle('active', n === index);
+      if (n === index) el.setAttribute('aria-current', 'true');
+      else el.removeAttribute('aria-current');
+    });
+  };
+
+   const AUTOPLAY_MS = 4000;
+  let timer: number | null = null;
+
+  const stop = (): void => {
+    if (timer !== null) {
+      clearInterval(timer);
+      timer = null;
+    }
+  };
+
+  // Restarting the timer on every call also resets the countdown after a manual click or swipe
+  const start = (): void => {
+    if (total < 2) return;
+    stop();
+    timer = window.setInterval(() => goTo(index + 1), AUTOPLAY_MS);
+  };
+
+  prev.addEventListener('click', () => { goTo(index - 1); start(); });
+  next.addEventListener('click', () => { goTo(index + 1); start(); });
+  dots.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.indicator');
+    if (btn) { goTo(Number(btn.dataset.index)); start(); }
+  });
+
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { goTo(index - 1); start(); }
+    if (e.key === 'ArrowRight') { goTo(index + 1); start(); }
+  });
+
+  // Swipe
+  let startX = 0;
+  viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { goTo(index + (dx < 0 ? 1 : -1)); start(); }
+  });
+
+  // Pause while hovering, or while a keyboard user has focus inside; resume afterwards
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+  carousel.addEventListener('focusin', (e) => {
+    if ((e.target as HTMLElement).matches(':focus-visible')) stop();
+  });
+  carousel.addEventListener('focusout', start);
+
+  goTo(0);
+  start();
+}
+
 // --- Populate every data-driven section before anything else runs ---
 
 renderNav('primary-nav', navItems);
@@ -201,6 +302,8 @@ renderGetInvolved('get-involved-grid', getInvolvedOptions);
 renderJoinLink('header-cta', joinLink);
 renderJoinLink('hero-cta', joinLink);
 renderJoinLink('dates-cta', joinLink);
+initGallery();
+
 
 // Footer year
 const yearEl = document.getElementById('year');

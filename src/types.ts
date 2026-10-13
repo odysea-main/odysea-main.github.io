@@ -52,3 +52,10 @@ export interface CurriculumWeek {
   material: string;
   presenter: string;
 }
+
+export interface CarouselSlide {
+  imageSrc: string;
+  label: string;        // e.g. "Week 1 · 24 Sep"
+  title: string;
+  description: string;
+}

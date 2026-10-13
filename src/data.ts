@@ -1,4 +1,4 @@
-import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption, CurriculumWeek } from './types';
+import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption, CurriculumWeek, CarouselSlide } from './types';
 
 // --- Southeast Asia (SEA) is the framing for this pilot: content below refers
 // to the region generally, not Singapore specifically, except where the
@@ -7,6 +7,7 @@ import { NavItem, Track, Card, Stat, TeamMember, JoinLink, GetInvolvedOption, Cu
 export const navItems: NavItem[] = [
   { label: 'Tracks', href: '#tracks' },
   { label: 'Curriculum', href: '#curriculum' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Schedule', href: '#schedule' },
   { label: 'Team', href: '#team' },
   { label: 'Advisors', href: '#advisors' },
@@ -217,4 +218,25 @@ export const curriculumData: CurriculumWeek[] = [
   { week: 6, date: '29 Oct', chapter: 'Reinforcement Learning', themes: ['Decision theory and RL', 'RL-related risks/alignment issues', 'Challenges in formalising "good" decision-making'], material: 'D1, D5.1', presenter: 'Shashvat' },
   { week: 7, date: '5 Nov', chapter: 'Training Dynamics', themes: ['Intro to learning dynamics', 'Methodologies and applications'], material: 'B3, B4', presenter: 'Ming Liang' },
   { week: 8, date: '12 Nov', chapter: 'Singular Learning Theory', themes: ['Intro to SLT', 'Methodologies and applications'], material: 'B3, B4', presenter: 'Ming Liang' },
+];
+
+export const carouselSlides: CarouselSlide[] = [
+  {
+    imageSrc: 'assets/events/week-01.jpg',
+    label: 'Week 1 · 24 Sep',
+    title: 'Alignment: An Introduction',
+    description: 'Introduction to alignment targets and the core problem framing.',
+  },
+  {
+    imageSrc: 'assets/events/week-02.jpg',
+    label: 'Week 2 · 1 Oct',
+    title: 'AI Alignment',
+    description: 'Problem decompositions and basic AI drives.',
+  },
+  {
+    imageSrc: 'assets/events/week-03.jpg',
+    label: 'Week 3 · 8 Oct',
+    title: 'Alignment in Practice',
+    description: ' Persona selection and misalignment from optimisation.',
+  },
 ];
